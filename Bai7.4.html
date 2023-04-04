@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 7: id=15398</title>
+</head>
+<body>
+<table style="text-align: center">
+    <tr>
+        <td style="width: 150px"><b>Amount</b></td>
+        <td style="width: 150px"><b>From Currency</b></td>
+        <td style="width: 150px"><b>To Currency</b></td>
+    </tr>
+    <tr>
+        <td><label><input type="text" name="amount" id="amount"></label></td>
+        <td>
+            <select name="FromC" id="fromC" style="text-align: center; width: 70px">
+                <option id="fromVND" value="fromVND">VND</option>
+                <option id="fromUSD" value="fromUSD">USD</option>
+            </select>
+        </td>
+        <td>
+            <select name="ToC" id="toC" style="text-align: center; width: 70px">
+                <option id="toUSD" value="toUSD">USD</option>
+                <option id="toVND" value="toVND">VND</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="convert()">CONVERT</button>
+        </td>
+    </tr>
+
+</table>
+<p style="color: blue" id="result"></p>
+<script>
+    function convert() {
+        let fromMoney = Number(document.getElementById("amount").value);
+        let fromCurrency = document.getElementById("fromC").value;
+        let toCurrency = document.getElementById("toC").value;
+        let resultMoney;
+        if ((fromCurrency === "fromVND" && toCurrency === "toVND") || (fromCurrency === "fromUSD" && toCurrency === "toUSD")) {
+            resultMoney = fromMoney;
+        } else if (fromCurrency === "fromVND" && toCurrency === "toUSD") {
+            resultMoney = fromMoney / 23000;
+        } else if (fromCurrency === "fromUSD" && toCurrency === "toVND") {
+            resultMoney = fromMoney * 23000;
+        }
+
+        document.getElementById("result").innerHTML = "Result: " + resultMoney.toFixed(2);
+    }
+
+</script>
+</body>
+</html>
