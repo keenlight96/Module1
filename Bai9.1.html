@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 9: id=15418</title>
+</head>
+<body>
+
+    <img src="https://www.ikea.com/us/en/images/products/sparka-soft-toy-soccer-ball-black-white__0981434_pe815368_s5.jpg" style="width: 200px; height: 200px" id="image">
+    <p>Click the button below to move the image to the right</p>
+    <button onclick="moveRight()">Click here</button>
+<script>
+    let movePx = 0;
+    function moveRight() {
+        movePx += 100;
+        document.getElementById("image").style.marginLeft = String(movePx) + "px";
+    }
+</script>
+</body>
+</html>
