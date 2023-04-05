@@ -6,10 +6,11 @@
 </head>
 <body>
 <script>
-    let message = prompt("Nhập chuỗi:");
-    message === "Employee" ? alert("Hello") :
-        message === "Director" ? alert("Greetings") :
-            message === "" ? alert("No login") : alert("");
+    let input = prompt("Nhập chuỗi:");
+    message = (input === "Employee") ? "Hello" :
+        (input === "Director") ? "Greetings" :
+            (input === "") ? "No login" : "";
+    alert(message);
 </script>
 </body>
 </html>
