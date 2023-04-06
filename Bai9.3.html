@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 9: id=15420</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="2"><h3>BMI CALCULATOR</h3></th>
+    </tr>
+    <tr>
+        <td>Cân nặng (kg):</td>
+        <td style="text-align: right"><label><input type="number" id="weight" name="weight"
+                          style="width: 70px"></label></td>
+    </tr>
+    <tr>
+        <td>Chiều cao (m):</td>
+        <td style="text-align: right;"><label><input type="number" id="height" name="height"
+                          style="width: 70px"></label></td>
+    </tr>
+</table>
+<button onclick="calBMI()">TÍNH TOÁN</button>
+<p id="result"><bold></bold></p>
+<script>
+    function calBMI() {
+        let weight = document.getElementById("weight").value;
+        let height = document.getElementById("height").value;
+        let bmi = weight / Math.pow(height, 2);
+        if (bmi < 18.5) document.getElementById("result").innerHTML += "Chỉ số BMI của bạn xếp loại thiếu cân";
+        else if (bmi < 25) document.getElementById("result").innerHTML += "Chỉ số BMI của bạn xếp loại bình thường";
+        else if (bmi < 30) document.getElementById("result").innerHTML += "Chỉ số BMI của bạn xếp loại thừa cân";
+        else document.getElementById("result").innerHTML += "Chỉ số BMI của bạn xếp loại béo phì";
+    }
+</script>
+</body>
+</html>
