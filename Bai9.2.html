@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 9: id=15419</title>
+</head>
+<body onload="docReady()">
+<img src="Resources/nobita.png" style="position: absolute; left: 500px; top: 0px" id="image">
+
+<script>
+    function goLeft() {
+        let currentPos = document.getElementById("image").style.left.slice(0, document.getElementById("image").style.left.indexOf("px"));
+        document.getElementById("image").style.left = parseInt(currentPos) - 20 + "px";
+    }
+    function goRight() {
+        let currentPos = document.getElementById("image").style.left.slice(0, document.getElementById("image").style.left.indexOf("px"));
+        document.getElementById("image").style.left = parseInt(currentPos) + 20 + "px";
+    }
+    function goUp() {
+        let currentPos = document.getElementById("image").style.top.slice(0, document.getElementById("image").style.top.indexOf("px"));
+        document.getElementById("image").style.top = parseInt(currentPos) - 20 + "px";
+    }
+    function goDown() {
+        let currentPos = document.getElementById("image").style.top.slice(0, document.getElementById("image").style.top.indexOf("px"));
+        document.getElementById("image").style.top = parseInt(currentPos) + 20 + "px";
+    }
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                goLeft();
+                break;
+            case 39:
+                goRight();
+                break;
+            case 38:
+                goUp();
+                break;
+            case 40:
+                goDown();
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+</script>
+
+</body>
+</html>
