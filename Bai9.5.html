@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 9: id=15422</title>
+</head>
+<style>
+    button {
+        font-family: Verdana;
+        width: 50px;
+        height: 40px;
+        font-size: 15px;
+    }
+</style>
+<body>
+<table style="font-family: Verdana">
+    <tr>
+        <td colspan="4" style="width: 200px; height: 50px"><label><input id="input" type="text" name="input" value=""
+                                                                         style="width: 210px; height: 50px; font-size: 20px; text-align: right"></label>
+        </td>
+        <td>
+            <button onclick="getValue('reset')" id="clear" style="width: 80px">RESET</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="getValue(7)" id="num7">7</button>
+        </td>
+        <td>
+            <button onclick="getValue(8)" id="num8">8</button>
+        </td>
+        <td>
+            <button onclick="getValue(9)" id="num9">9</button>
+        </td>
+        <td>
+            <button onclick="getValue('/')" id="divide">/</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="getValue(4)" id="num4">4</button>
+        </td>
+        <td>
+            <button onclick="getValue(5)" id="num5">5</button>
+        </td>
+        <td>
+            <button onclick="getValue(6)" id="num6">6</button>
+        </td>
+        <td>
+            <button onclick="getValue('*')" id="multiple">*</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="getValue(3)" id="num3">3</button>
+        </td>
+        <td>
+            <button onclick="getValue(2)" id="num2">2</button>
+        </td>
+        <td>
+            <button onclick="getValue(1)" id="num1">1</button>
+        </td>
+        <td>
+            <button onclick="getValue('-')" id="subtract">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="getValue(0)" id="num0">0</button>
+        </td>
+        <td>
+            <button onclick="getValue('.')" id="numPoint">.</button>
+        </td>
+        <td>
+            <button onclick="getValue('=')" id="equal">=</button>
+        </td>
+        <td>
+            <button onclick="getValue('+')" id="add">+</button>
+        </td>
+    </tr>
+</table>
+
+<script>
+    let basicOperation, number1, number2, result;
+    function getValue(action) {
+        let equalOperation = false;
+        let input = document.getElementById("input");
+        if (Number.isInteger(action)) {
+            input.value += String(action);
+        } else switch (action) {
+            case ".": {
+                input.value += ".";
+                break;
+            }
+            case "+": {
+                basicOperation = "+";
+                number1 = Number(input.value);
+                input.value = "";
+                break;
+            }
+            case "-": {
+                basicOperation = "-";
+                number1 = Number(input.value);
+                input.value = "";
+                break;
+            }
+            case "*": {
+                basicOperation = "*";
+                number1 = Number(input.value);
+                input.value = "";
+                break;
+            }
+            case "/": {
+                basicOperation = "/";
+                number1 = Number(input.value);
+                input.value = "";
+                break;
+            }
+            case "=": {
+                number2 = Number(input.value);
+                equalOperation = true;
+                break;
+            }
+            case "reset": {
+                input.value = "";
+                number1 = 0;
+                number2 = 0;
+                basicOperation = "";
+                equalOperation = false;
+            }
+        }
+        if (equalOperation === true) {
+            switch (basicOperation) {
+                case "+": {
+                    result = number1 + number2;
+                    input.value = result;
+                    break;
+                }
+                case "-": {
+                    result = number1 - number2;
+                    input.value = result;
+                    break;
+                }
+                case "*": {
+                    result = number1 * number2;
+                    input.value = result;
+                    break;
+                }
+                case "/": {
+                    result = number1 / number2;
+                    input.value = result;
+                    break;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
