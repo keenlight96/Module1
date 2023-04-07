@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 9: id=15426</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td style="width: 150px"><button onclick="goodFunc()" style="width: 100px">GOOD</button></td>
+        <td id="good" style="background-color: white; width: 50px "></td>
+    </tr>
+    <tr>
+        <td style="width: 150px"><button onclick="fastFunc()" style="width: 100px">FAST</button></td>
+        <td id="fast" style="background-color: white; width: 50px "></td>
+    </tr>
+    <tr>
+        <td style="width: 150px"><button onclick="cheapFunc()" style="width: 100px">CHEAP</button></td>
+        <td id="cheap" style="background-color: white; width: 50px "></td>
+    </tr>
+</table>
+<table>
+
+</table>
+<script>
+    let previous = 0;
+    function goodFunc() {
+        let element1 = document.getElementById("good");
+        let element2 = document.getElementById("fast");
+        let element3 = document.getElementById("cheap");
+        if (element1.style.backgroundColor === "white") {
+            element1.style.backgroundColor = "darkgreen";
+            if (previous === 2) element3.style.backgroundColor = "white";
+            else element2.style.backgroundColor = "white";
+            previous = 1;
+        } else {
+            element1.style.backgroundColor = "white";
+        }
+    }
+    function fastFunc() {
+        let element1 = document.getElementById("good");
+        let element2 = document.getElementById("fast");
+        let element3 = document.getElementById("cheap");
+        if (element2.style.backgroundColor === "white") {
+            element2.style.backgroundColor = "cornflowerblue";
+            if (previous === 1) element3.style.backgroundColor = "white";
+            else element1.style.backgroundColor = "white";
+            previous = 2;
+        } else {
+            element2.style.backgroundColor = "white";
+        }
+    }
+    function cheapFunc() {
+        let element1 = document.getElementById("good");
+        let element2 = document.getElementById("fast");
+        let element3 = document.getElementById("cheap");
+        if (element3.style.backgroundColor === "white") {
+            element3.style.backgroundColor = "indianred";
+            if (previous === 2) element1.style.backgroundColor = "white";
+            else element2.style.backgroundColor = "white";
+            previous= 3;
+        } else {
+            element3.style.backgroundColor = "white";
+        }
+    }
+</script>
+
+</body>
+</html>
