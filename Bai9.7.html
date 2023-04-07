@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 9: id=15424</title>
+</head>
+<body>
+<h1>DO YOU LOVE ME?</h1>
+<button onclick="alert('<3')" id="yes"
+        style="width: 50px; position: absolute; left: 75px">YES</button>
+<button onmouseover="overNo()" id="no"
+        style="width: 50px; position: absolute; left: 150px">NO</button>
+<script>
+    function random(min, max) {
+        return parseInt(Math.random() * (max + 1 - min) + min);
+    }
+    function overNo() {
+        let noButton = document.getElementById("no");
+        noButton.style.left = random(0, 1500) + "px";
+        noButton.style.top = random(0, 750) + "px";
+    }
+</script>
+
+</body>
+</html>
