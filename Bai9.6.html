@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 9: id=15423</title>
+</head>
+<style>
+    td {
+        width: 150px;
+        height: 150px;
+    }
+</style>
+<body>
+<table border="1">
+    <tr>
+        <td><img onclick="changeImg('pic1')" id="pic1" src="" style="width: 150px; height: 150px"></td>
+        <td><img onclick="changeImg('pic2')" id="pic2" src="" style="width: 150px; height: 150px"></td>
+        <td><img onclick="changeImg('pic3')" id="pic3" src="" style="width: 150px; height: 150px"></td>
+    </tr>
+    <tr>
+        <td><img onclick="changeImg('pic4')" id="pic4" src="" style="width: 150px; height: 150px"></td>
+        <td><img onclick="changeImg('pic5')" id="pic5" src="" style="width: 150px; height: 150px"></td>
+        <td><img onclick="changeImg('pic6')" id="pic6" src="" style="width: 150px; height: 150px"></td>
+    </tr>
+    <tr>
+        <td><img onclick="changeImg('pic7')" id="pic7" src="" style="width: 150px; height: 150px"></td>
+        <td><img onclick="changeImg('pic8')" id="pic8" src="" style="width: 150px; height: 150px"></td>
+        <td><img onclick="changeImg('pic9')" id="pic9" src="" style="width: 150px; height: 150px"></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td style="height: 50px; width: 450px; text-align: center">
+            <button onclick="generate()" style="height: 30px; width: 100px">START</button>
+        </td>
+    </tr>
+</table>
+<script>
+    let Src = [];
+    for (let i = 0; i < 9; i++) {
+        Src.push("http://localhost:63342/Module1/Resources/meomeme(" + (i+1) + ").jpg");
+    }
+    let id = [
+        "pic1", "pic2", "pic3",
+        "pic4", "pic5", "pic6",
+        "pic7", "pic8", "pic9",
+    ]
+
+    function random(min, max) {
+        return parseInt(Math.random() * (max + 1 - min) + min);
+    }
+
+    function generate() {
+        for (let i = 0; i < id.length; i++) {
+            let Img = document.getElementById(id[i]);
+            Img.src = Src[random(0, 8)];
+        }
+    }
+
+    function changeImg(idIn) {
+        let Img = document.getElementById(idIn);
+        if (Img.src === Src[8]) {
+            Img.src = Src[0];
+        } else {
+            for (let i = 0; i < Src.length - 1; i++) {
+                if (Img.src === Src[i]) {
+                    Img.src = Src[i+1];
+                    break;
+                }
+            }
+        }
+        let result = true;
+        for (let i = 0; i < Src.length; i++) {
+            let Img2 = document.getElementById(id[i]);
+                if (Img2.src != Src[i]) {
+                    result = false;
+                    break;
+                }
+        }
+        if (result === true) alert("Chúc mừng! Bạn đã chiến thắng");
+    }
+</script>
+
+</body>
+</html>

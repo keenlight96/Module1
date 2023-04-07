@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3ae474e-f74a-4df2-9049-7e0fbae7e5ec" name="Changes" comment="id=15420">
+    <list default="true" id="d3ae474e-f74a-4df2-9049-7e0fbae7e5ec" name="Changes" comment="id=15421">
+      <change afterPath="$PROJECT_DIR$/Bai9.6.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +67,8 @@
       <workItem from="1680570955565" duration="14588000" />
       <workItem from="1680660369183" duration="13121000" />
       <workItem from="1680744000154" duration="8310000" />
-      <workItem from="1680758676645" duration="10396000" />
+      <workItem from="1680758676645" duration="13422000" />
+      <workItem from="1680829272090" duration="10257000" />
     </task>
     <task id="LOCAL-00001" summary="id=15422">
       <created>1680757435417</created>
@@ -89,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680771134209</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="id=15421">
+      <created>1680773494574</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680773494574</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +119,7 @@
     <MESSAGE value="id=15422" />
     <MESSAGE value="id=15419" />
     <MESSAGE value="id=15420" />
-    <option name="LAST_COMMIT_MESSAGE" value="id=15420" />
+    <MESSAGE value="id=15421" />
+    <option name="LAST_COMMIT_MESSAGE" value="id=15421" />
   </component>
 </project>
