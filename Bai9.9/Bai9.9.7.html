@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 9: id=15427</title>
+</head>
+<body>
+<h2>BẢNG TÍNH CƯỚC ĐIỆN THOẠI</h2>
+<table>
+    <tr>
+        <th>Dịch vụ</th>
+        <th>Giá cước</th>
+        <th>Số phút gọi</th>
+    </tr>
+    <tr>
+        <td>Nội mạng</td>
+        <td>1,190đ/phút</td>
+        <td><label><input id="noimang" style="width: 100px"></label></td>
+    </tr>
+    <tr>
+        <td>Ngoại mạng</td>
+        <td>1,390đ/phút</td>
+        <td><label><input id="ngoaimang" style="width: 100px"></label></td>
+    </tr>
+</table>
+<h3 id="result">Tổng tiền cước:</h3>
+<button onclick="cal()">Tính cước</button>
+
+<script>
+    function cal() {
+        let noimang = parseInt(document.getElementById("noimang").value);
+        let ngoaimang = parseInt(document.getElementById("ngoaimang").value);
+        let result = document.getElementById("result");
+        result.innerHTML = "Tổng tiền cước: " + (noimang * 1190 + ngoaimang * 1390) + " VNĐ";
+    }
+
+</script>
+</body>
+</html>

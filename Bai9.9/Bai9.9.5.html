@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 9: id=15427</title>
+</head>
+<body>
+<script>
+    let diemKtra = parseFloat(prompt("Điểm kiểm tra (hệ số 0.1): "));
+    let diemGiuaKy = parseFloat(prompt("Điểm giữa kỳ (hệ số 0.3): "));
+    let diemCuoiKy = parseFloat(prompt("Điểm cuối kỳ (hệ số 0.6): "));
+    let diemTongKet = diemKtra * 0.1 + diemGiuaKy * 0.3 + diemCuoiKy * 0.6;
+    if (diemTongKet >= 8) alert("Học lực giỏi");
+    else if (diemTongKet >= 6.5) alert("Học lực khá");
+    else if (diemTongKet >= 5) alert("Học lực trung bình");
+    else alert("Học lực yếu");
+</script>
+</body>
+</html>
