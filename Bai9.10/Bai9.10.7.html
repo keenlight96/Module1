@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 9: id=15428</title>
+</head>
+<body>
+<h2>Phương trình bậc 2: ax<sup>2</sup> + bx + c = 0</h2>
+<table>
+    <tr>
+        <td>Nhập a:</td>
+        <td><label><input id="a" type="number" style="width: 100px"></label></td>
+    </tr>
+    <tr>
+        <td>Nhập b:</td>
+        <td><label><input id="b" type="number" style="width: 100px"></label></td>
+    </tr>
+    <tr>
+        <td>Nhập c:</td>
+        <td><label><input id="c" type="number" style="width: 100px"></label></td>
+    </tr>
+</table>
+<h3 id="ptr"></h3>
+<h4 id="kq"></h4>
+<button onclick="cal()">Tính toán</button>
+<script>
+    function cal() {
+        let a = Number(document.getElementById("a").value);
+        let b = Number(document.getElementById("b").value);
+        let c = Number(document.getElementById("c").value);
+        document.getElementById("ptr").innerHTML = "Phương trình: " + a + "x<sup>2</sup> + " + b + "x + " + c + " = 0";
+        let x, delta;
+        if (a === 0) {
+            if (b === 0) {
+                if (c === 0) x = "Phương trình vô số nghiệm";
+                else x = "Phương trình vô nghiệm";
+            } else x = "x = " + (-b / a);
+        } else {
+            delta = b * b - 4 * a * c;
+            switch (true) {
+                case (delta < 0):
+                    x = "Phương trình vô nghiệm";
+                    break
+                case (delta === 0):
+                    x = "Phương trình có nghiệm kép: x<sub>1</sub> = x<sub>2</sub> = " + (-b / (2 * a));
+                    break;
+                case (delta > 0):
+                    x = "Phương trình có 2 nghiệm phân biệt:" +
+                        "<br>x<sub>1</sub> = " + ((-b + Math.sqrt(delta)) / (2 * a)).toFixed(3) +
+                        "<br>x<sub>2</sub> = " + ((-b - Math.sqrt(delta)) / (2 * a)).toFixed(3)
+
+            }
+
+        }
+
+
+        document.getElementById("kq").innerHTML = "Kết quả: " + x;
+    }
+
+</script>
+</body>
+</html>

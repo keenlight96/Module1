@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 9: id=15428</title>
+</head>
+<body>
+<h2>TÍNH GIÁ ĐIỆN</h2>
+<h3>BIỂU GIÁ BÁN LẺ ĐIỆN</h3>
+<table border="1">
+    <tr>
+        <th>ĐIỆN BẬC THANG</th>
+        <th>GIÁ (đồng/kWh)</th>
+    </tr>
+    <tr>
+        <td>Bậc 1: Cho kWh từ 0 - 50</td>
+        <td style="text-align: center">1.678</td>
+    </tr>
+    <tr>
+        <td>Bậc 2: Cho kWh từ 51 - 100</td>
+        <td style="text-align: center">1.734</td>
+    </tr>
+    <tr>
+        <td>Bậc 3: Cho kWh từ 101 - 200</td>
+        <td style="text-align: center">2.014</td>
+    </tr>
+    <tr>
+        <td>Bậc 4: Cho kWh từ 201 - 300</td>
+        <td style="text-align: center">2.536</td>
+    </tr>
+    <tr>
+        <td>Bậc 5: Cho kWh từ 301 - 400</td>
+        <td style="text-align: center">2.834</td>
+    </tr>
+    <tr>
+        <td>Bậc 6: Cho kWh từ 401 trở lên</td>
+        <td style="text-align: center">2.927</td>
+    </tr>
+</table>
+<br>
+
+<table>
+    <tr>
+        <td>Nhập số kWh điện:</td>
+        <td><label><input id="kwh" type="number" style="width: 100px"></label></td>
+    </tr>
+</table>
+<h4 id="kq"></h4>
+<button onclick="cal()">Tính toán</button>
+<script>
+    function cal() {
+        let kwh = parseInt(document.getElementById("kwh").value);
+        let totalCost;
+        if (kwh <= 50) totalCost = kwh * 1678;
+        else if (kwh <= 100) totalCost = 50 * 1678 + (kwh - 50) * 1734;
+        else if (kwh <= 200) totalCost = 50 * 1678 + 50 * 1734 + (kwh - 100) * 2014;
+        else if (kwh <= 300) totalCost = 50 * 1678 + 50 * 1734 + 100 * 2014 + (kwh - 200) * 2536;
+        else if (kwh <= 400) totalCost = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + (kwh - 300) * 2834;
+        else {
+            totalCost = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + 100 * 2834 + (kwh - 400) * 2927;
+        }
+        document.getElementById("kq").innerHTML  = "Số tiền điện là: " + totalCost + " VNĐ";
+    }
+
+</script>
+</body>
+</html>

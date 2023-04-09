@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3ae474e-f74a-4df2-9049-7e0fbae7e5ec" name="Changes" comment="id=15424">
+    <list default="true" id="d3ae474e-f74a-4df2-9049-7e0fbae7e5ec" name="Changes" comment="id=15426">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,10 +37,15 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/My Drive/Study/Codegym/Module1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/My Drive/Study/Codegym/Module1/Bai9.10&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\My Drive\Study\Codegym\Module1\Bai9.10" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Bai5.2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module1/Bai5.2.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -67,7 +72,9 @@
       <workItem from="1680660369183" duration="13121000" />
       <workItem from="1680744000154" duration="8310000" />
       <workItem from="1680758676645" duration="13422000" />
-      <workItem from="1680829272090" duration="20574000" />
+      <workItem from="1680829272090" duration="23656000" />
+      <workItem from="1680938832221" duration="9100000" />
+      <workItem from="1681013449352" duration="9514000" />
     </task>
     <task id="LOCAL-00001" summary="id=15422">
       <created>1680757435417</created>
@@ -125,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680850937668</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="id=15426">
+      <created>1680856309217</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680856309217</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +163,7 @@
     <MESSAGE value="id=15421" />
     <MESSAGE value="id=15423" />
     <MESSAGE value="id=15424" />
-    <option name="LAST_COMMIT_MESSAGE" value="id=15424" />
+    <MESSAGE value="id=15426" />
+    <option name="LAST_COMMIT_MESSAGE" value="id=15426" />
   </component>
 </project>

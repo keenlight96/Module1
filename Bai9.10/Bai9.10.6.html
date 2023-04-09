@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 9: id=15428</title>
+</head>
+<body>
+<h2>Phương trình bậc 1: ax + b = 0</h2>
+<table>
+    <tr>
+        <td>Nhập a: </td>
+        <td><label><input id="a" type="number" style="width: 100px"></label></td>
+    </tr>
+    <tr>
+        <td>Nhập b: </td>
+        <td><label><input id="b" type="number" style="width: 100px"></label></td>
+    </tr>
+</table>
+<h3 id="ptr"></h3>
+<h4 id="kq"></h4>
+<button onclick="cal()">Tính toán</button>
+<script>
+    function cal() {
+        let a = Number(document.getElementById("a").value);
+        let b = Number(document.getElementById("b").value);
+        document.getElementById("ptr").innerHTML += "Phương trình: " + a + "x + " + b + " = 0";
+        let x;
+        if (a === 0) {
+            if (b === 0) x = "Phương trình vô số nghiệm";
+            else x = "Phương trình vô nghiệm";
+        } else x = "x = " + (-b / a);
+
+        document.getElementById("kq").innerHTML = "Kết quả: " + x;
+    }
+
+</script>
+</body>
+</html>

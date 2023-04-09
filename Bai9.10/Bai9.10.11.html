@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 9: id=15428</title>
+</head>
+<style>
+    td {
+        text-align: center;
+    }
+
+    td.left {
+        text-align: left;
+    }
+
+</style>
+<body>
+<h2>BẢNG TÍNH THUẾ THU NHẬP CÁ NHÂN</h2>
+<h3>Diễn giải</h3>
+<p>
+    Giảm trừ bản thân: 11.000.000 VNĐ <br>
+    Giảm trừ người phụ thuộc: 4.400.000 VNĐ/người phụ thuộc
+</p>
+<h3>Bảng thu nhập tính thuế và thuế suất</h3>
+<table border="1">
+    <tr>
+        <th>Bậc</th>
+        <th>Thu nhập tính thuế/tháng (triệu đồng)</th>
+        <th>Thuế suất</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Đến 05</td>
+        <td>5%</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Trên 05 đến 10</td>
+        <td>10%</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Trên 10 đến 18</td>
+        <td>15%</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Trên 18 đến 32</td>
+        <td>20%</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Trên 32 đến 52</td>
+        <td>25%</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Trên 52 đến 80</td>
+        <td>30%</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Trên 80</td>
+        <td>35%</td>
+    </tr>
+</table>
+<br>
+<table>
+    <tr>
+        <td class="left">Tổng thu nhập:</td>
+        <td><label><input id="thuNhap" style="width: 120px"></label></td>
+    </tr>
+    <tr>
+        <td class="left">Số người phụ thuộc:</td>
+        <td><label><input id="soPhuThuoc" style="width: 120px"></label></td>
+    </tr>
+    <tr>
+        <td class="left">Thuế TNCN phải nộp:</td>
+        <td style="text-align: left;"><b id="nopThue"></b></td>
+    </tr>
+</table>
+<br>
+<button onclick="cal()">TÍNH TOÁN</button>
+
+<script>
+    function cal() {
+        let thuNhap = parseInt(document.getElementById("thuNhap").value);
+        let soPhuThuoc = parseInt(document.getElementById("soPhuThuoc").value);
+        let chiuThue = thuNhap - 11000000 - 4400000 * soPhuThuoc;
+        let nopThue = 0;
+        // if (chiuThue <= 5000000) nopThue = chiuThue * 5 / 100;
+        // else if (chiuThue <= 10000000) nopThue = 5000000 * 5 / 100 + (chiuThue - 5000000) * 10 / 100;
+        // else if (chiuThue <= 18000000) nopThue = 5000000 * 5 / 100 + 5000000 * 10 / 100 + (chiuThue - 5000000) * 10 / 100;
+        if (chiuThue <= 5000000) nopThue = chiuThue * 5 / 100;
+        else {
+            nopThue += 5000000 * 5 / 100;
+            if (chiuThue <= 10000000) nopThue += (chiuThue - 5000000) * 10 / 100;
+            else {
+                nopThue += 5000000 * 10 / 100;
+                if (chiuThue <= 18000000) nopThue += (chiuThue - 10000000) * 15 / 100;
+                else {
+                    nopThue += 8000000 * 15 / 100;
+                    if (chiuThue <= 32000000) nopThue += (chiuThue - 18000000) * 20 / 100;
+                    else {
+                        nopThue += 14000000 * 20 / 100;
+                        if (chiuThue <= 52000000) nopThue += (chiuThue - 32000000) * 25 / 100;
+                        else {
+                            nopThue += 20000000 * 25 / 100;
+                            if (chiuThue <= 80000000) nopThue += (chiuThue - 52000000) * 30 / 100;
+                            else nopThue += 28000000 * 30 / 100 + (chiuThue - 80000000) *35 / 100;
+                        }
+                    }
+                }
+            }
+        }
+        document.getElementById("nopThue").innerHTML = nopThue + " VNĐ";
+    }
+</script>
+</body>
+</html>

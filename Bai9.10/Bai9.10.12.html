@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 9: id=15428</title>
+</head>
+<body>
+<h2>TÍNH LÃI NGÂN HÀNG</h2>
+<table>
+    <tr>
+        <td>Số tiền ban đầu</td>
+        <td><label><input id="loan" style="width: 120px"></label></td>
+        <td>VNĐ</td>
+    </tr>
+    <tr>
+        <td>Số tháng cho vay</td>
+        <td><label><input id="months" style="width: 120px"></label></td>
+        <td>Tháng</td>
+    </tr>
+    <tr>
+        <td>Lãi suất hàng tháng</td>
+        <td><label><input id="interest" style="width: 120px"></label></td>
+        <td>%</td>
+    </tr>
+    <tr>
+        <td>Lãi ngân hàng</td>
+        <td><p id="increase" style="width: 120px"></p></td>
+        <td>VNĐ</td>
+    </tr>
+</table>
+<br>
+<button onclick="cal()">TÍNH TOÁN</button>
+<script>
+    function cal() {
+        let loan = parseInt(document.getElementById("loan").value);
+        let months = parseInt(document.getElementById("months").value);
+        let interest = Number(document.getElementById("interest").value);
+        let increase = 0, total = loan;
+        for (let i = 1; i <= months; i++) {
+            increase = total * interest / 100;
+            total += increase;
+        }
+        document.getElementById("increase").innerHTML = (total - loan).toFixed(2);
+    }
+</script>
+</body>
+</html>
