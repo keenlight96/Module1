@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 10: id=15448</title>
+</head>
+<body>
+<!--Bài 1-->
+<h2>BÀI 1:</h2>
+<p id="resultB1"></p>
+
+<!--Bài 2-->
+<h2>BÀI 2:</h2>
+<button onclick="bai2()">START</button>
+<p id="resultB2"></p>
+</body>
+<script>
+// BÀI 1
+    let resultB1 = "";
+    for (let i = 0; i <= 5; i++) {
+        resultB1 += "The number is " + i + "<br>";
+    }
+    document.getElementById("resultB1").innerHTML = resultB1;
+
+// BÀI 2
+    function bai2() {
+        let total = 0;
+        let n = parseInt(prompt("Nhập số:"));
+        for (let i = 1; i <= n ; i++) {
+            total += i;
+        }
+        document.getElementById("resultB2").innerHTML = "Tổng từ 1 đến " + n + " là: " + total;
+    }
+</script>
+</html>
