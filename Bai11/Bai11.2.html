@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 11: id=15454</title>
+</head>
+<body>
+<script>
+    let x = 2, count = 0;
+    let ktra;
+    let text = "";
+    while (count < 20) {
+        ktra = true;
+        for (let i = 2; i < x ; i++) {
+            if (x % i === 0) {
+                ktra = false;
+                break;
+            }
+        }
+        if (ktra === true) {
+            text += String(x + " ");
+            count++;
+        }
+        x++;
+    }
+    document.write("20 số nguyên tố đầu tiên là: " + text);
+</script>
+</body>
+</html>
