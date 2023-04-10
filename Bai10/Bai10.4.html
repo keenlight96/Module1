@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 10: id=15451</title>
+</head>
+<style>
+    td {
+        width: 20px;
+    }
+</style>
+<body>
+
+<p id="table"></p>
+<script>
+    let text = "<table border='1' style='border-collapse: collapse'>";
+    for (let i = 1; i <= 10; i++) {
+        text += "<tr>";
+        for (let j = 1; j <= 10; j++) {
+            text += "<td>" + i * j + "</td>"
+        }
+        text += "</tr>"
+    }
+    document.getElementById("table").innerHTML = text;
+</script>
+</body>
+</html>
