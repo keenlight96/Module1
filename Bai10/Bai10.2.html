@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 10: id=15449</title>
+</head>
+<body>
+<!--BÀI 1-->
+<h2>BÀI 1</h2>
+<button onclick="funcBai1()">START</button>
+<p id="bai1"></p>
+
+<!--BÀI 2-->
+<h2>BÀI 2</h2>
+<p id="bai2"></p>
+
+<script>
+    function funcBai1() {
+        let text = "";
+        let total = 0, num = 0;
+        while ((num = parseInt(prompt("Nhập số:"))) !== -1) {
+            total += num;
+            text += num + " + ";
+        }
+        document.getElementById("bai1").innerHTML = text.slice(0, text.length - 2) + "= " + total;
+    }
+
+//    Bài 2:
+    let text2 = "";
+    for (let i = 1; i <= 100; i++) {
+        text2 += "<hr style='width: " + i + "%'>";
+    }
+    document.getElementById("bai2").innerHTML = text2;
+
+
+</script>
+</body>
+</html>
