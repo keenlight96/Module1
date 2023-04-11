@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3ae474e-f74a-4df2-9049-7e0fbae7e5ec" name="Changes" comment="id=15455">
-      <change beforePath="$PROJECT_DIR$/Bai11/Bai11.3/Bai11.3.6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bai11/Bai11.3/Bai11.3.6.html" afterDir="false" />
+    <list default="true" id="d3ae474e-f74a-4df2-9049-7e0fbae7e5ec" name="Changes" comment="id=15455 update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai11/Bai11.3/Bai11.3.8.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bai11/Bai11.3/Bai11.3.8.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +77,7 @@
       <workItem from="1680938832221" duration="9100000" />
       <workItem from="1681013449352" duration="9632000" />
       <workItem from="1681099415762" duration="15116000" />
-      <workItem from="1681175553468" duration="7642000" />
+      <workItem from="1681175553468" duration="8350000" />
     </task>
     <task id="LOCAL-00001" summary="id=15422">
       <created>1680757435417</created>
@@ -197,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681185140109</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="id=15455 update">
+      <created>1681186614967</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681186614967</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +238,7 @@
     <MESSAGE value="id=15453" />
     <MESSAGE value="id=15454" />
     <MESSAGE value="id=15455" />
-    <option name="LAST_COMMIT_MESSAGE" value="id=15455" />
+    <MESSAGE value="id=15455 update" />
+    <option name="LAST_COMMIT_MESSAGE" value="id=15455 update" />
   </component>
 </project>
