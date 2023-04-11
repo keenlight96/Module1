@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 11: id=15456</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td id="h1"></td>
+    </tr>
+    <tr>
+        <td id="h2"></td>
+    </tr>
+    <tr>
+        <td id="h3" style="text-align: right"></td>
+    </tr>
+    <tr>
+        <td id="h4" style="text-align: right"></td>
+    </tr>
+</table>
+
+<script>
+    // HÌNH 1:
+    let h1 = document.getElementById("h1");
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            h1.innerHTML += "*";
+        }
+        h1.innerHTML += "<br>";
+    }
+    // HÌNH 2:
+    let h2 = document.getElementById("h2");
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= (5 - i + 1); j++) {
+            h2.innerHTML += "*";
+        }
+        h2.innerHTML += "<br>";
+    }
+    // HÌNH 3:
+    let h3 = document.getElementById("h3");
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            h3.innerHTML += "*";
+        }
+        h3.innerHTML += "<br>";
+    }
+    // HÌNH 4:
+    let h4 = document.getElementById("h4");
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= (5 - i + 1); j++) {
+            h4.innerHTML += "*";
+        }
+        h4.innerHTML += "<br>";
+    }
+</script>
+</body>
+</html>
