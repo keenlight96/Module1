@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 8: id=15469</title>
+</head>
+<body>
+<h2>CARO GAME SIMPLE</h2>
+<p id="caroBoard"></p>
+<button onclick="chgValue()">CHANGE VALUE</button>
+<script>
+    let n = parseInt(prompt("Nhập số dòng:"));
+    let m = parseInt(prompt("Nhập số cột:"));
+    let board = "";
+    let arr = new Array(n);
+    for (let i = 0; i < n; i++) {
+        arr[i] = new Array(m);
+    }
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < m; j++) {
+            arr[i][j] = 0;
+        }
+    }
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < m; j++) {
+            if (j !== m - 1) board += arr[i][j] + " ";
+            else board += arr[i][j] + "<br>";
+        }
+    }
+    document.getElementById("caroBoard").innerHTML = board;
+
+    function chgValue() {
+        let x = parseInt(prompt("Nhập tọa độ x:"));
+        let y = parseInt(prompt("Nhập tọa độ y:"));
+        arr[x][y] = "x";
+
+        board = [];
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < m; j++) {
+                if (j !== m - 1) board += arr[i][j] + " ";
+                else board += arr[i][j] + "<br>";
+            }
+        }
+        document.getElementById("caroBoard").innerHTML = board;
+    }
+</script>
+</body>
+</html>
