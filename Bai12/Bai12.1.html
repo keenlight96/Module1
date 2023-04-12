@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 12: id=15465</title>
+</head>
+<body>
+<label><input id="input"></label>
+<button onclick="add()">Add</button>
+<button onclick="display()">Display</button>
+<br>
+<p id="result"></p>
+</body>
+<script>
+    let arr = [];
+
+    function add() {
+        let input = document.getElementById("input");
+        arr.push(input.value);
+        input.value = "";
+    }
+
+    function display() {
+        let text = "";
+        for (let i = 0; i < arr.length; i++) {
+            text += "Element " + i + " = " + arr[i] + "<br>";
+        }
+        document.getElementById("result").innerHTML = text;
+    }
+</script>
+</html>
