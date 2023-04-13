@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 13: id=15484</title>
+</head>
+<body>
+<h2>Please type slowly</h2>
+<textarea id="text" onkeydown="autoType()" onkeyup="upDelete()" style="width: 200px; height: 100px"></textarea>
+</body>
+<script>
+    fullText = "Omega LUL! ";
+    function autoType() {
+        let text = document.getElementById("text");
+        text.value += fullText[text.value.length % 11];
+    }
+
+
+    function upDelete() {
+        let text2 = document.getElementById("text");
+        text2.value = text2.value.slice(0, text2.value.length - 1);
+    }
+</script>
+</html>
