@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 13: id=15481</title></head>
+</head>
+<body>
+<script>
+    // CÁCH 1
+    // let text = prompt("Nhập chuỗi:");
+    // let text2 = "";
+    // for (let i = 0; i < text.length; i++) {
+    //     if ((text.charCodeAt(i) >= 65) && (text.charCodeAt(i) <= 90)) {
+    //         text2 += text[i].toLowerCase();
+    //     } else if ((text.charCodeAt(i) >= 97) && (text.charCodeAt(i) <= 122)) {
+    //         text2 += text[i].toUpperCase();
+    //     } else text2 += text[i];
+    // }
+    // document.write(text2);
+
+    // CÁCH 2
+    let text = prompt("Nhập chuỗi:");
+    for (let i = 0; i < text.length; i++) {
+        if ((text.charCodeAt(i) >= 65) && (text.charCodeAt(i) <= 90)) {
+            document.write(text[i].toLowerCase());
+        } else if ((text.charCodeAt(i) >= 97) && (text.charCodeAt(i) <= 122)) {
+            document.write(text[i].toUpperCase());
+        } else document.write(text[i]);
+    }
+
+    // CÁCH 3
+    // let text = prompt("Nhập chuỗi:");
+    // for (let i = 0; i < text.length; i++) {
+    //     if (text[i].toUpperCase() === text[i]) {
+    //         document.write(text[i].toLowerCase());
+    //     } else if (text[i].toLowerCase() === text[i]) {
+    //         document.write(text[i].toUpperCase());
+    //     } else document.write(text[i]);
+    // }
+</script>
+</body>
+</html>

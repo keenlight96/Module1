@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d3ae474e-f74a-4df2-9049-7e0fbae7e5ec" name="Changes" comment="id=15469">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bai12/Bai12.5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bai12/Bai12.5.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,8 @@
       <workItem from="1681013449352" duration="9632000" />
       <workItem from="1681099415762" duration="15116000" />
       <workItem from="1681175553468" duration="21339000" />
-      <workItem from="1681264486921" duration="10347000" />
+      <workItem from="1681264486921" duration="12775000" />
+      <workItem from="1681347972947" duration="2776000" />
     </task>
     <task id="LOCAL-00001" summary="id=15422">
       <created>1680757435417</created>
@@ -255,7 +255,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681285634535</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="id=15467">
+      <created>1681291765780</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1681291765780</updated>
+    </task>
+    <task id="LOCAL-00027" summary="id=15469">
+      <created>1681291833950</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1681291833950</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,8 +306,8 @@
     <MESSAGE value="id=15456" />
     <MESSAGE value="id=15465" />
     <MESSAGE value="id=15466" />
-    <MESSAGE value="id=15467" />
     <MESSAGE value="id=15468" />
+    <MESSAGE value="id=15467" />
     <MESSAGE value="id=15469" />
     <option name="LAST_COMMIT_MESSAGE" value="id=15469" />
   </component>
