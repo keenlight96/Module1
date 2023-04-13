@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 13: id=15485</title>
+</head>
+<body>
+<script>
+    let arr = [100, 5, -6, 7, 13, 5, -10, 10, 13, 9];
+    let countElement = 0;
+    let arr2 = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= 10) {
+            countElement++;
+            if (arr2.length > 0) {
+                let chk = true;
+                for (let j = 0; j < arr2.length; j++) {
+                    if (arr[i] === arr2[j]) {
+                        chk = false;
+                        break;
+                    }
+                }
+                if (chk) arr2[arr2.length] = arr[i];
+            } else arr2[arr2.length] = arr[i];
+        }
+    }
+    document.write("Số phần tử lớn hơn hoặc bằng 10 là " + countElement + "<br>");
+    document.write("Số giá trị lớn hơn hoặc bằng 10 là " + arr2.length);
+</script>
+</body>
+</html>

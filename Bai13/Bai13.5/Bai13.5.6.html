@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 13: id=15485</title>
+</head>
+<body>
+<script>
+    let input;
+    let arr = [];
+    do {
+        input = parseInt(prompt("Nhập phần tử:"));
+        if (!isNaN(input)) arr[arr.length] = input;
+    } while (!isNaN(input));
+    let inputV = parseInt(prompt("Nhập V:"));
+    let chk = false;
+    for (let i = 0; i < arr.length; i++) {
+        if (inputV === arr[i]) {
+            chk = true;
+            break;
+        }
+    }
+    if (chk) document.write("V is in the array");
+    else document.write("V is not in the array");
+</script>
+</body>
+</html>

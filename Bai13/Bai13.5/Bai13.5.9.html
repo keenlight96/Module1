@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 13: id=15485</title>
+</head>
+<body>
+<script>
+    let input;
+    let arrA = [];
+    do {
+        input = parseInt(prompt("Nhập phần tử mảng A:"));
+        if (!isNaN(input)) arrA.push(input);
+    } while (!isNaN(input));
+    document.write("Mảng A: " + arrA + "<br>");
+
+    let arrB = [];
+    do {
+        input = parseInt(prompt("Nhập phần tử mảng B:"));
+        if (!isNaN(input)) arrB.push(input);
+    } while (!isNaN(input));
+    document.write("Mảng B: " + arrB + "<br>");
+    
+    let arrC = [];
+    for (let i = 0; i < arrA.length; i++) {
+        arrC.push(arrA[i]);
+    }
+    for (let i = 0; i < arrB.length; i++) {
+        arrC.push(arrB[i]);
+    }
+    document.write("Mảng C:" + arrC);
+</script>
+</body>
+</html>

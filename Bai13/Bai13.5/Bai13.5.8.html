@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 13: id=15485</title>
+</head>
+<body>
+<script>
+    let input;
+    let arr = [];
+    do {
+        input = parseInt(prompt("Nhập phần tử:"));
+        if (!isNaN(input)) arr.push(input);
+    } while (!isNaN(input));
+    document.write("Mảng vừa nhập: " + arr + "<br>");
+
+    // CÁCH 1
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = i+1; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+                arr[i] = arr[i] + arr[j];
+                arr[j] = arr[i] - arr[j];
+                arr[i] = arr[i] - arr[j];
+            }
+        }
+    }
+
+    // CÁCH 2
+    // arr.sort(function(a, b) {
+    //     return (b - a);
+    // })
+
+    document.write("Mảng giảm dần: " + arr);
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 13: id=15485</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let input
+    do {
+        input = parseInt(prompt("Nhập phần tử:"));
+        if (!isNaN(input)) arr.push(input);
+    } while (!isNaN((input)));
+    let V = parseInt(prompt("Nhập V:"));
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === V) {
+            for (let j = i; j < arr.length - 1; j++) {
+                arr[j] = arr[j +1];
+            }
+            arr[arr.length] = 0;
+            i--;
+        }
+    }
+    document.write(arr);
+</script>
+</body>
+</html>
