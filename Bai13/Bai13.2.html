@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 13: id=15482</title>
+</head>
+<label><input id="input"></label>
+<button onclick="meaning()">Tra nghĩa</button>
+<body>
+<script>
+    let arrTA = [
+        "cat", "dog", "lion", "camel",
+        "panda", "monkey", "crocodile"
+    ]
+    let arrTV = [
+        "mèo", "chó", "sư tử", "lạc đà",
+        "gấu trúc", "khỉ", "cá sấu"
+    ]
+    document.write("<br><br> Test case: " + arrTA);
+    function meaning() {
+        let searchWord = document.getElementById("input").value;
+        for (let i = 0; i < arrTA.length; i++) {
+            if (arrTA[i] === searchWord.toLowerCase()) {
+                alert(arrTV[i]);
+                break;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
