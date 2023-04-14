@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 14: id=15499</title>
+</head>
+<body>
+<h2>Temperature Converter</h2>
+<table>
+    <tr>
+        <td>Fahrenheit:</td>
+        <td><label><input id="input" oninput="convert()"></label></td>
+    </tr>
+    <tr>
+        <td>Celsius:</td>
+        <td id="result"></td>
+    </tr>
+</table>
+<script>
+    function convertFC(x) {
+        return ((x - 32) / 1.8);
+    }
+    function convert() {
+        let fInput = document.getElementById("input").value;
+        document.getElementById("result").innerHTML = convertFC(fInput);
+    }
+
+
+</script>
+</body>
+</html>
