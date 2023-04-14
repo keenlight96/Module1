@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 15: id=15501</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        let chk = true;
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                chk=false;
+                break;
+            }
+        }
+        return chk;
+    }
+
+    for (let i = 2; i < 10000; i++) {
+        if (isPrime(i)) document.write(i + ", ");
+    }
+</script>
+</body>
+</html>
