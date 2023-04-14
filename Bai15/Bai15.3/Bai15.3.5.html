@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 15: id=15503</title>
+</head>
+<body>
+<button onclick="doFunction()">CLICK HERE</button>
+<script>
+    let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function chooseStar(x) {
+        for (let i = 0; i < stars.length; i++) {
+            if (stars[i] === x)
+                return constellation[i];
+        }
+        return -1;
+    }
+    function doFunction() {
+        let text = prompt("Nhập tên ngôi sao:");
+        if (chooseStar(text) === -1) alert("Không tìm thấy ngôi sao nào");
+        else alert(chooseStar(text));
+    }
+</script>
+</body>
+</html>
