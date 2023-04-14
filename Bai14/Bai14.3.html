@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 14: id=15500</title>
+</head>
+<body>
+<script>
+    function minArr(arrF) {
+        let min = arrF[0];
+        for (let i = 1; i < arrF.length; i++) {
+            if (arrF[i] < min) {
+                min = arrF[i];
+            }
+        }
+        return min;
+    }
+
+    let arr1 = [3, 5, 1, 8, -3, 7, 8];
+    let arr2 = [7, 12, 6, 9, 20, 56, 89];
+    let arr3 = [];
+    let arr4 = [0, 0, 0, 0, 0, 0];
+
+    document.write("Min của mảng (" + arr1 + ") là: " + minArr(arr1) + "<br>");
+    document.write("Min của mảng (" + arr2 + ") là: " + minArr(arr2) + "<br>");
+    document.write("Min của mảng (" + arr3 + ") là: " + minArr(arr3) + "<br>");
+    document.write("Min của mảng (" + arr4 + ") là: " + minArr(arr4) + "<br>");
+
+</script>
+</body>
+</html>
