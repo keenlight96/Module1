@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 13: id=15483</title>
+</head>
+<body>
+<h2>CARO GAME</h2>
+<button id="turn" onclick="input()">Play: Player 1</button>
+<p id="board"></p>
+<script>
+    let playerTurn = 1;
+    let table = new Array(30);
+    for (let i = 0; i < table.length; i++) {
+        table[i] = new Array(30);
+    }
+    for (let i = 0; i < table.length; i++) {
+        for (let j = 0; j < table[i].length; j++) {
+            table[i][j] = "&nbsp" + String.fromCharCode(183) + "&nbsp";
+        }
+    }
+
+    function displayBoard() {
+        let text = "";
+        for (let i = 0; i < table.length; i++) {
+            for (let j = 0; j < table[i].length; j++) {
+                text += "&nbsp" + table[i][j] + "&nbsp"
+            }
+            text += "<br>";
+        }
+        document.getElementById("board").innerHTML = text;
+    }
+
+    displayBoard();
+
+    function input() {
+        let chkInput;
+        let x;
+        let y;
+        do {
+            chkInput = true;
+            x = parseInt(prompt("Tọa độ x:"));
+            y = parseInt(prompt("Tọa độ y:"));
+            if ((table[x][y] === "X") || (table[x][y] === "O")) {
+                chkInput = false;
+                alert("Trùng, nhập lại");
+            }
+        } while (!chkInput);
+
+        if (playerTurn === 1) {
+            table[x][y] = "X";
+            playerTurn = 2;
+            document.getElementById("turn").innerHTML = "Play: Player 2";
+        } else {
+            table[x][y] = "O";
+            playerTurn = 1;
+            document.getElementById("turn").innerHTML = "Play: Player 1";
+        }
+
+        displayBoard();
+
+        let chk1 = false;
+        for (let i = x - 1; i <= x + 1; i++) {
+            for (let j = y - 1; j <= y + 1; j++) {
+                if ((i !== x) || (j !== y)) {
+                    if (table[i][j] === table[x][y]) {
+                        if (table[i + i - x][j + j - y] === table[x][y]) {
+                            chk1 = true;
+                            break;
+                        }
+                        if (table[x - (i - x)][y - (j - y)] === table[x][y]) {
+                            chk1 = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (chk1) break;
+        }
+        if (chk1) {
+            if (playerTurn === 1) alert("Player 2 chiến thắng");
+            else alert("Player 1 chiến thắng");
+        }
+    }
+
+
+</script>
+</body>
+</html>
