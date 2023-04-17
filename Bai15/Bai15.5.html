@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 15: id=15505</title>
+</head>
+<body>
+<h2>LONG'S FOSTER</h2>
+<table>
+    <tr>
+        <td>Tên:</td>
+        <td><label><input id="name"></label></td>
+    </tr>
+    <tr>
+        <td>Giống:</td>
+        <td><label><input id="type"></label></td>
+    </tr>
+    <tr>
+        <td>Giới tính:</td>
+        <td><label><input id="gender"></label></td>
+    </tr>
+    <tr>
+        <td>Tuổi:</td>
+        <td><label><input id="age"></label></td>
+    </tr>
+    <tr>
+        <td>Cân nặng:</td>
+        <td><label><input id="weight"></label></td>
+    </tr>
+</table>
+<button onclick="add()">Thêm vào danh sách</button>
+<br>
+<br>
+<!--<p id="board"></p>-->
+<table id="board" border="1"></table>
+<script>
+    let arr = new Array(1);
+    arr[0] = new Array(5);
+    for (let i = 0; i < arr[0].length; i++) {
+        arr[0][i] = "";
+    }
+    console.log(arr);
+
+    let board = "";
+    function display() {
+        board = "<tr>" +
+            "<th style='width: 200px'>TÊN</th>" +
+            "<th style='width: 150px'>GIỐNG</th>" +
+            "<th style='width: 70px'>GIỚI TÍNH</th>" +
+            "<th style='width: 50px'>TUỔI</th>" +
+            "<th style='width: 100px'>CÂN NẶNG (KG)</th>" +
+            "<th style='width: 100px'>THAO TÁC</th>" +
+            "</tr>";
+
+        for (let i = 0; i < arr.length; i++) {
+            board += "<tr>";
+            for (let j = 0; j < 5; j++) {
+                board += "<td>" + arr[i][j] + "</td>";
+            }
+            board += "<td style='text-align: center'><button onclick='del(" + i + ")'>Xóa</button>" +
+                "<button onclick='edit(" + i + ")'>Sửa tên:</button>" +
+                "<label><input id='edit"+i+"'></label></td></tr>";
+        }
+        document.getElementById("board").innerHTML = board;
+    }
+    display();
+
+    function add() {
+        if (arr.length === 0) {
+            arr = new Array(1);
+            arr[0] = new Array(5);
+            for (let i = 0; i < arr[0].length; i++) {
+                arr[0][i] = "";
+            }
+        }
+        if (arr[0][0] === "") {
+            arr[0][0] = document.getElementById("name").value;
+            arr[0][1] = document.getElementById("type").value;
+            arr[0][2] = document.getElementById("gender").value;
+            arr[0][3] = document.getElementById("age").value;
+            arr[0][4] = document.getElementById("weight").value;
+        } else {
+            arr.push([document.getElementById("name").value,
+                document.getElementById("type").value,
+                document.getElementById("gender").value,
+                document.getElementById("age").value,
+                document.getElementById("weight").value,
+            ])
+        }
+        console.log(arr);
+        display();
+    }
+
+    function del(element) {
+        arr.splice(element, 1);
+        display();
+    }
+
+    function edit(element) {
+        arr[element][0] = document.getElementById("edit" + element).value;
+        display();
+    }
+
+</script>
+</body>
+</html>
