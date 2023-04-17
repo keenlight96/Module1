@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 15: id=15504</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập số:"));
+
+    function giaiThua(number) {
+        if (number === 2) return 2;
+        else {
+            return number * giaiThua(number - 1);
+        }
+    }
+
+    document.write(n + " giai thừa là " + giaiThua(n));
+</script>
+</body>
+</html>

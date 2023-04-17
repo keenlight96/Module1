@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 15: id=15504</title>
+</head>
+<body>
+<script>
+    function swap(array) {
+        let temp = array[0];
+        array[0] = array[1];
+        array[1] = temp;
+    }
+
+    let a = Number(prompt("Nhập a:"));
+    let b = Number(prompt("Nhập b:"));
+    let arr = [];
+    arr[0] = a;
+    arr[1] = b;
+    document.write("a = " + a + ", b = " + b + "<br>");
+    swap(arr);
+    a = arr[0];
+    b = arr[1];
+    document.write("a = " + a + ", b = " + b + "<br>");
+</script>
+</body>
+</html>

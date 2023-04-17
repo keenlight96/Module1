@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 15: id=15504</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập mảng ký tự (phần tử cách nhau dấu phẩy:");
+    let arr = input.split(",");
+    let character = prompt("Nhập ký tự muốn kiểm tra:");
+
+    function countChar(array, char) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (char === array[i]) count++;
+        }
+        if (!count) return -1;
+        else return count;
+    }
+    document.write("Số lần xuất hiện: " + countChar(arr, character));
+</script>
+</body>
+</html>

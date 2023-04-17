@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 15: id=15504</title>
+</head>
+<body>
+<script>
+    function area(radius) {
+        return Math.PI * radius * radius;
+    }
+
+    function perimeter(radius) {
+        return Math.PI * radius * 2;
+    }
+    let n = Number(prompt("Nhập bán kính:"));
+    document.write("Chu vi hình tròn bán kính " + n + " là " + perimeter(n).toFixed(2) + "<br>");
+    document.write("Diện tích hình tròn bán kính " + n + " là " + area(n).toFixed(2));
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 15: id=15504</title>
+</head>
+<body>
+<script>
+    function reverseArray(array) {
+        for (let i = 0; i < (array.length / 2 - 1); i++) {
+            array[i] = array[i] + array[array.length - 1 - i];
+            array[array.length - 1 - i] = array[i] - array[array.length - 1 - i];
+            array[i] = array[i] - array[array.length - 1 - i];
+        }
+    }
+
+    let input = prompt("Nhập mảng (phần tử cách nhau dấu phẩy):");
+    let arr = input.split(",");
+
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = Number(arr[i]);
+    }
+    document.write("Mảng nhập vào: " + arr);
+    document.write("<br>");
+    reverseArray(arr);
+
+    document.write("Mảng đảo ngược: " + arr);
+</script>
+</body>
+</html>
