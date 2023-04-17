@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 15: id=15506</title>
+</head>
+<body>
+<script>
+    let string = prompt("Nhập chuỗi:");
+    let i =0;
+    function isPalindrome(str) {
+        if (str.length > 1) {
+            if (str[0] === str[str.length - 1]) {
+                return (true && isPalindrome(str.slice(1, str.length - 1)));
+            } else return false;
+        } else return true;
+    }
+    alert(isPalindrome(string));
+</script>
+</body>
+</html>
