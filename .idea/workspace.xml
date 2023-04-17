@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3ae474e-f74a-4df2-9049-7e0fbae7e5ec" name="Changes" comment="id=15505">
+    <list default="true" id="d3ae474e-f74a-4df2-9049-7e0fbae7e5ec" name="Changes" comment="id=15506">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai15/Bai15.6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bai15/Bai15.6.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +92,7 @@
       <workItem from="1681534437133" duration="731000" />
       <workItem from="1681546868276" duration="2862000" />
       <workItem from="1681632150937" duration="1959000" />
-      <workItem from="1681693871165" duration="17564000" />
+      <workItem from="1681693871165" duration="18764000" />
     </task>
     <task id="LOCAL-00001" summary="id=15422">
       <created>1680757435417</created>
@@ -394,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681721660809</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="id=15506">
+      <created>1681724560352</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1681724560352</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +420,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="id=15451" />
     <MESSAGE value="id=15453" />
     <MESSAGE value="id=15454" />
     <MESSAGE value="id=15455" />
@@ -437,6 +444,7 @@
     <MESSAGE value="id=15503" />
     <MESSAGE value="id=15504" />
     <MESSAGE value="id=15505" />
-    <option name="LAST_COMMIT_MESSAGE" value="id=15505" />
+    <MESSAGE value="id=15506" />
+    <option name="LAST_COMMIT_MESSAGE" value="id=15506" />
   </component>
 </project>
