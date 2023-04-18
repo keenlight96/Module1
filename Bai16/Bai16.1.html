@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 16: id=15516</title>
+</head>
+<body>
+<script>
+    function Date(day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+        this.setDay = function (day2) {
+            this.day = day2;
+        }
+        this.setMonth = function (month2) {
+            this.month = month2;
+        }
+        this.setYear = function (year2) {
+            this.year = year2;
+        }
+        this.setDate = function (day2, month2, year2) {
+            this.day = day2;
+            this.month = month2;
+            this.year = year2;
+        }
+        this.toString = function () {
+            return (this.day + "/" + this.month + "/" + this.year);
+        }
+    }
+
+    let newDate = new Date(2, 2, 2022);
+
+    newDate.setDay(15);
+    let currentDay = newDate.getDay();
+    alert(newDate.toString());
+</script>
+</body>
+</html>
