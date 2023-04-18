@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 16: id=15517</title>
+</head>
+<body>
+<script>
+    function Circle(radius, color) {
+        this.radius = radius;
+        this.color = color;
+        this.getRadius = function () {
+            return this.radius;
+        }
+        this.getColor = function () {
+            return this.color;
+        }
+        this.getArea = function () {
+            return Math.PI * radius * radius;
+        }
+    }
+    let x = new Circle(2, "red");
+    alert(x.getRadius());
+    alert(x.getArea());
+</script>
+</body>
+</html>
