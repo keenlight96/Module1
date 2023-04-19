@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 16: id=15521</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        name;
+        battery;
+        currentText;
+        status = false; // true = power on; false = power off;
+        inboxText = [];
+        sent = [];
+
+        constructor(name, battery) {
+            this.name = name;
+            this.battery = battery;
+        }
+
+        checkStatus() {
+            if (this.status) return "ON";
+            else return "OFF";
+        }
+
+        powerSwitch() {
+            this.status = !this.status;
+        }
+
+        charge() {
+            this.battery = 100;
+        }
+
+        texting(text) {
+            if (this.status) {
+                this.currentText = text;
+                this.battery -= 1;
+            } else alert("Điện thoại đang tắt");
+        }
+
+        sendText(toMobile) {
+            if (this.status) {
+                toMobile.inboxText.push(this.currentText);
+                this.sent.push(["to " + toMobile.name, this.currentText]);
+                this.battery -= 1;
+            } else alert("Điện thoại đang tắt");
+        }
+
+        checkInbox() {
+            if (this.status) {
+                document.write(this.name + " (Inbox): <br>");
+                for (let i = 0; i < this.inboxText.length; i++) {
+                    document.write(this.inboxText[i] + "<br>");
+                }
+                this.battery -= 1;
+            } else alert("Điện thoại đang tắt");
+        }
+
+        checkSent() {
+            if (this.status) {
+                document.write(this.name + " (Sent): <br>");
+                for (let i = 0; i < this.sent.length; i++) {
+                    document.write(this.sent[i] + "<br>");
+                }
+                this.battery -= 1;
+            } else alert("Điện thoại đang tắt");
+        }
+    }
+
+    let Nokia = new Mobile("Nokia", 100);
+    let iphone = new Mobile("iphone", 100);
+    iphone.powerSwitch(); // Bật điện thoại
+    Nokia.powerSwitch(); // Bật điện thoại
+
+    iphone.texting("Chào nokia");
+    iphone.sendText(Nokia);
+    iphone.texting("Chào nokia 2");
+    iphone.sendText(Nokia);
+    iphone.texting("Chào nokia 3");
+    iphone.sendText(Nokia);
+
+    Nokia.checkInbox();
+    iphone.checkSent();
+
+    document.write("<br>" + iphone.name + " battery = " + iphone.battery);
+    document.write("<br>" + Nokia.name + " battery = " + Nokia.battery);
+
+    iphone.charge();
+    document.write("<br><br> After charge iphone: <br>" + iphone.name + " battery = " + iphone.battery);
+
+    console.log(Nokia);
+    console.log(iphone);
+
+
+</script>
+</body>
+</html>
