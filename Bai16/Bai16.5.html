@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 16: id=15520</title>
+</head>
+<body>
+<script>
+    function Temperature() {
+        this.inputTemp = function (temp) {
+            this.temp = temp;
+        }
+        this.getF = function () {
+            return (this.temp * 9 / 5) + 32;
+        }
+        this.getKenvin = function () {
+            return (this.temp + 273);
+        }
+
+    }
+    let temp = new Temperature();
+    temp.inputTemp(Number(prompt("Nhập nhiệt độ")));
+    document.write("Độ C: "+ temp.temp + "<br>");
+    document.write("Độ F: "+ temp.getF() + "<br>");
+    document.write("Kenvin: "+ temp.getKenvin() + "<br>");
+
+</script>
+</body>
+</html>
