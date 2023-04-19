@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 17: id=15530</title>
+</head>
+<body>
+<script>
+    class Battery {
+        energy;
+        constructor (energy) {
+            this.energy = energy;
+        }
+        getEnergy() {
+            return this.energy;
+        }
+        setEnergy(energy) {
+            this.energy = energy;
+        }
+        decEnergy() {
+            this.energy -= 1;
+        }
+    }
+    class Lamp {
+        battery;
+        constructor(battery) {
+            this.battery = battery;
+        }
+        turnOn() {
+            alert("Đang bật");
+            this.battery.decEnergy();
+        }
+        turnOff() {
+            alert("Đang tắt");
+        }
+    }
+    let pin = new Battery(100);
+    let den = new Lamp(pin);
+    den.turnOn();
+    console.log(den);
+
+</script>
+</body>
+</html>
