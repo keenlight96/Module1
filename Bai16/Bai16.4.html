@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 - Bai 16: id=15519</title>
+</head>
+<table>
+    <tr>
+        <td>Chiều dài</td>
+        <td><label><input id="width" style="width: 100px" onchange="update()"></label></td>
+    </tr>
+    <tr>
+        <td>Chiều rộng</td>
+        <td><label><input id="height" style="width: 100px" onchange="update()"></label></td>
+    </tr>
+    <tr>
+        <td>Diện tích</td>
+        <td><p id="area"></p></td>
+    </tr>
+    <tr>
+        <td>Chu vi</td>
+        <td><p id="perimeter"></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center"><button onclick="drawRect()" >Vẽ hình chữ nhật</button></td>
+        <td style="text-align: center"><button onclick="clearCurrent()">Xóa hình hiện tại</button></td>
+    </tr>
+</table>
+
+<canvas id="canvas" width="500px" height="1200px"></canvas>
+<body>
+<script>
+    function Rectangle(width, height) {
+        this.width = Number(width);
+        this.height = Number(height);
+        this.getArea = function () {
+            return (this.width * this.height);
+        }
+        this.getPerimeter = function () {
+            return ((this.width + this.height) * 2);
+        }
+        this.draw = function () {
+            let ctx = document.getElementById("canvas").getContext("2d");
+            ctx.beginPath();
+            ctx.rect(100, 100, this.width, this.height);
+            ctx.fill();
+        }
+    }
+
+    function drawRect() {
+        let w = document.getElementById("width").value;
+        let h = document.getElementById("height").value;
+        let rect = new Rectangle(w, h);
+        rect.draw();
+    }
+
+    function clearCurrent() {
+        let ctx = document.getElementById("canvas").getContext("2d");
+        ctx.clearRect(0,0,canvas.width, canvas.height);
+    }
+
+    function update() {
+        let w = document.getElementById("width").value;
+        let h = document.getElementById("height").value;
+        let rect = new Rectangle(w, h);
+        document.getElementById("area").innerHTML = rect.getArea();
+        document.getElementById("perimeter").innerHTML = rect.getPerimeter();
+    }
+</script>
+</body>
+</html>
